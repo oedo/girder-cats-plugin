@@ -1,3 +1,5 @@
+from girder import plugin
+
 from girder.api import access
 from girder.constants import AccessType, registerAccessFlag
 from girder.api.describe import Description, autoDescribeRoute
@@ -89,5 +91,9 @@ class CatResource(Resource):
         return CatModel().feed(doc)
 
 
-def load(info):
-    info['apiRoot'].cat = CatResource()
+class GirderPlugin(plugin.GirderPlugin):
+    DISPLAY_NAME = 'Cats in Girder'
+    CLIENT_SOURCE_PATH = 'web_client'
+
+    def load(self, info):
+        info['apiRoot'].cat = CatResource()

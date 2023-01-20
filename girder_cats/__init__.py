@@ -5,7 +5,7 @@ from girder.constants import AccessType, registerAccessFlag
 from girder.api.describe import Description, autoDescribeRoute
 from girder.api.rest import Resource
 
-from girder.plugins.cats.models.cat_model import CatModel
+from girder_cats.models.cat_model import CatModel
 
 class CatResource(Resource):
     def __init__(self):

@@ -6,5 +6,4 @@ A contrived example of a Girder plugin.
 
 Features
 --------
-
-* TODO
+Girder v3 ready.
